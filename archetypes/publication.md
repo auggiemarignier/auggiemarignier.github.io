@@ -8,7 +8,7 @@ authors:
 - admin
 
 # Author notes (optional)
-# author_notes:
+author_notes: []
 
 date: ""
 doi: ""
@@ -20,8 +20,8 @@ doi: ""
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: **
-publication_short: In **
+publication: "**"
+publication_short: "**"
 
 abstract: 
 
@@ -30,8 +30,6 @@ tags: []
 # Custom links (uncomment lines below)
 links:
 - name: URL
-  url: 
-- name: PDF
   url: 
 
 ---
