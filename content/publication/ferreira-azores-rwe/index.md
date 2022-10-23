@@ -5,11 +5,11 @@ title: "Crustal structure of the Azores Archipelago from Rayleigh wave elliptici
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
-- Ana M. G. Ferreira
-- admin
-- Januka Attanyake
-- Michael Frietsch
-- Andrea Berbellini
+- A. M. G. Ferreira
+- A. Marignier
+- J. Attanyake
+- M. Frietsch
+- A. Berbellini
 
 # Author notes (optional)
 author_notes: []

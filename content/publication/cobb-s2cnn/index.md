@@ -5,13 +5,13 @@ title: "Efficient Generalized Spherical CNNs"
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
-- Oliver J. Cobb
-- Christopher G. R. Wallis
-- Augustine N. Mavor-Parker
-- admin
-- Matthew A. Price
-- Mayeul d'Avezac
-- Jason D. McEwen
+- O. J. Cobb
+- C. G. R. Wallis
+- A. N. Mavor-Parker
+- A. Marignier
+- M. A. Price
+- M. d'Avezac
+- J. D. McEwen
 
 # Author notes (optional)
 author_notes: []

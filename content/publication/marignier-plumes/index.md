@@ -5,9 +5,9 @@ title: "The Probability of Mantle Plumes in Global Tomographic Models"
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
-- admin
-- Ana M. G. Ferreira
-- Thomas D. Kitching
+- A. Marignier
+- A. M. G. Ferreira
+- T. D. Kitching
 
 # Author notes (optional)
 author_notes: []
