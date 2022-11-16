@@ -16,7 +16,7 @@ menu_title = "#2b2b2b"
 
 # Home sections
 home_section_odd = "#ffffff"
-home_section_even = "#f5f5f5"
+home_section_even = "#e1e1e1"
 
 # Links
 link = "#2962ff"
@@ -25,13 +25,13 @@ link_hover = "#1912ff"
 [dark]
   background = "#000000"
 
-  home_section_odd = "#050505"
-  home_section_even = "#010101"
+  home_section_odd = "#000000"
+  home_section_even = "#191919"
 
-  menu_primary = "#111111"
+  menu_primary = "#000000"
   menu_text = "#eeeeee"
-  menu_text_active = "#ffffff"
+  menu_text_active = "#2962ff"
   menu_title = "#bbbbbb"
 
-  link = "#0000aa"
-  link_hover = "#0000ff"
+  link = "#1912ff"
+  link_hover = "#2962ff"
