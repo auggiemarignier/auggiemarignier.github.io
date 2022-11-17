@@ -4,8 +4,8 @@ title: ""
 event: ""
 event_url: ""
 
-location:  ""
-address: ""
+location: ""
+address: 
   street:  ""
   city:  ""
   region:  ""
