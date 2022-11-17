@@ -13,17 +13,17 @@ address:
   country: United Kingdom
 
 summary: ""
-abstract: ""
+abstract: "In this work we use a trans-dimensional Markov Chain Monte Carlo sampler for mass-mapping, promoting sparsity in a wavelet basis.  This sampler gradually grows the parameter space as required by the data, exploiting the extremely sparse nature of mass maps in wavelet space.  The wavelet coefficients are arranged in a tree-like structure, which adds finer scale detail as the parameter space grows. This method produces naturally parsimonious solutions, requiring less than 1% of the potential maximum number of wavelet coefficients. We show how this method is able to recover detailed mass maps with uncertainties on both simulated and real datasets."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2022-05-04"
-all_day: false
+all_day: true
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2017-01-01T00:00:00Z"
 
-authors: [A. Marignier, T. D. Kitching, J. D. McEwen, A. M. G. Ferreira]
+authors: []
 tags: []
 
 # Is this a featured talk? (true/false)
@@ -50,5 +50,3 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
-In this work we use a trans-dimensional Markov Chain Monte Carlo sampler for mass-mapping, promoting sparsity in a wavelet basis.  This sampler gradually grows the parameter space as required by the data, exploiting the extremely sparse nature of mass maps in wavelet space.  The wavelet coefficients are arranged in a tree-like structure, which adds finer scale detail as the parameter space grows. This method produces naturally parsimonious solutions, requiring less than 1% of the potential maximum number of wavelet coefficients. We show how this method is able to recover detailed mass maps with uncertainties on both simulated and real datasets.
