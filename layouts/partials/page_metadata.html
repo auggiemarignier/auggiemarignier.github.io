@@ -13,6 +13,19 @@
   {{ end }}
   {{ end }}
 
+  {{ if eq $page.Type "talk" }}
+  <div>
+    {{ $page.Params.event }}
+  </div>
+  <div>
+    {{ if $page.Params.location }}
+        {{ $page.Params.location }}{{ with $page.Params.address.city }}, {{ . }}{{ end }}
+    {{ else }}
+        {{ $page.Params.address.city }}
+    {{ end }}
+  </div>
+  {{ end }}
+
   {{ if not (in (slice "event" "page") $page.Type) | and (ne $page.Params.show_date false) }}
   <span class="article-date">
     {{ $date := $page.Lastmod.Format site.Params.date_format }}
