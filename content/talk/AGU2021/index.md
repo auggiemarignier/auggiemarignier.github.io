@@ -1,7 +1,7 @@
 ---
 title: "Proximal Markov Chain Monte Carlo: Towards Building a Sparse Earth Model"
 
-event: "AGU Fall Meeting 2021"
+event: "AGU Fall Meeting 2021 - *Winner of the AGU Seismology Section Outstanding Student Presentation Award*"
 event_url: "https://www.agu.org/Fall-Meeting-2021"
 
 location:  ""
