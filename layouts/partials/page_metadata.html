@@ -15,7 +15,7 @@
 
   {{ if eq $page.Type "talk" }}
   <div>
-    {{ $page.Params.event }}
+    {{ $page.Params.event  | markdownify }}
   </div>
   <div>
     {{ if $page.Params.location }}

@@ -29,7 +29,7 @@
       {{ if eq $item.Type "talk" }}
       <div>
         {{ with $item.Params.event }}
-        <span>{{ . }}</span>
+        <span>{{ . | markdownify  }}</span>
         {{ end }}
       </div>
 
