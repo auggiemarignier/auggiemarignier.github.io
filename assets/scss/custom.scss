@@ -76,7 +76,7 @@
 .article-metadata {
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1em;
+    font-size: 0.9em;
     letter-spacing: 0.03em;
     color: $sta-dark-background;
 
@@ -97,6 +97,12 @@
         font-weight: bold;
     }
 }
+
+/* For article page only, not lists. */
+.article-container .article-metadata {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
 
 .dark .article-metadata {
     color: $sta-background;
