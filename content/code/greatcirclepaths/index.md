@@ -1,6 +1,6 @@
 ---
-title: "PxMCMC"
-summary: "Proximal Markov Chain Monte Carlo with Python"
+title: "GreatCirclePaths"
+summary: "Find pixels along a great circle on a discretised sphere"
 authors: []
 tags: []
 categories: []
@@ -15,14 +15,10 @@ image:
   preview_only: false
 
 links:
-- name: CODE
-  url: https://github.com/auggiemarignier/pxmcmc
+- name: Code
+  url: https://github.com/auggiemarignier/GreatCirclePaths
   icon_pack: fab
   icon: github
-- name: DOCS
-  url: https://pxmcmc.readthedocs.io/en/latest/?badge=latest
-  icon_pack: fas
-  icon: book-open
 - name: Paper
   url: /publication/marignier-s2-pxmcmc
   icon_pack: fas
