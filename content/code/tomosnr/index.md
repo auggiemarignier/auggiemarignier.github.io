@@ -10,7 +10,7 @@ date: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
+  caption: "The probability of deep mantle plumes in a tomographic model calculated from simulated uncertainties"
   focal_point: ""
   preview_only: false
 
