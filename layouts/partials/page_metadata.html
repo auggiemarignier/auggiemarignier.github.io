@@ -32,14 +32,20 @@
   </div>
   {{ end }}
 
-  {{ if and (eq $is_list 1) (eq $page.Type "publication") }}
-  <span class="pub-publication">
-    {{ if $page.Params.publication_short }}
-      {{ $page.Params.publication_short | markdownify }}
-    {{ else if $page.Params.publication }}
-      {{ $page.Params.publication | markdownify }}
+  {{ if eq $page.Type "publication"}}
+    {{ if eq $is_list 1}}
+        <span class="pub-publication">
+            {{ if $page.Params.publication_short }}
+            {{ $page.Params.publication_short | markdownify }}
+            {{ else if $page.Params.publication }}
+            {{ $page.Params.publication | markdownify }}
+            {{ end }}
+        </span>
+        {{ else }}
+        <span class="pub-publication">
+            {{ $page.Params.publication | markdownify }}
+        </span>
     {{ end }}
-  </span>
   {{ end }}
 
   {{ if and (eq $page.Type "post") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}
