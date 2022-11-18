@@ -1,0 +1,21 @@
+{{ $is_list := .is_list }}
+{{ $page := .page }}
+
+
+<div>
+    {{ partial "page_metadata_authors" $page }}
+</div>
+{{ if eq $is_list 1}}
+<div class="pub-publication">
+    {{ if $page.Params.publication_short }}
+    {{ $page.Params.publication_short | markdownify }}
+    {{ else if $page.Params.publication }}
+    {{ $page.Params.publication | markdownify }}
+    {{ end }}
+</div>
+{{ else }}
+<div class="pub-publication">
+    {{ $page.Params.publication | markdownify }}
+</div>
+<div>{{ $page.Params.date.Year }}</div>
+{{ end }}

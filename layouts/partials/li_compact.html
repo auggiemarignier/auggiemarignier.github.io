@@ -25,16 +25,11 @@
 
     <div class="stream-meta article-metadata mt-0">
       {{ if eq $item.Type "talk" }}
-      {{ partial "talk_metadata" (dict "page" $item "is_list" 1) }}  
+      {{ partial "talk_metadata" (dict "page" $item "is_list" 1) }}
+      {{ else if eq $item.Type "publication" }}
+      {{ partial "publication_metadata" (dict "page" $item "is_list" 1) }}
       {{ end }}
 
-      {{ if and $show_authors_only $item.Params.authors }}
-      <div>
-        {{ partial "page_metadata_authors" $item }}
-      </div>
-      {{ else if not $show_authors_only }}
-        {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
-      {{ end }}
     </div>
 
     {{ if $has_attachments }}
