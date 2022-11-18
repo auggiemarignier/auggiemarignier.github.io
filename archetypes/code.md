@@ -14,9 +14,13 @@ image:
   focal_point: ""
   preview_only: false
 
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
+links:
+- name: Code
+  url: 
+  icon_pack: fab
+  icon: github
+- name: DOCS
+  url: 
+  icon_pack: fas
+  icon: book-open
 ---
