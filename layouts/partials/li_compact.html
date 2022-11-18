@@ -41,7 +41,7 @@
     {{ end }}
 
   </div>
-  <div class="ml-3">
+  <div style="margin-top: 1.5rem">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
     {{ $image := .Resize "150x" }}
