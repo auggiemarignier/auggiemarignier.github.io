@@ -1,0 +1,6 @@
+{{ $is_list := .is_list }}
+{{ $page := .page }}
+
+<div>
+    {{ $page.Params.summary | markdownify }}
+</div>

@@ -28,6 +28,8 @@
       {{ partial "talk_metadata" (dict "page" $item "is_list" 1) }}
       {{ else if eq $item.Type "publication" }}
       {{ partial "publication_metadata" (dict "page" $item "is_list" 1) }}
+      {{ else if eq $item.Type "code" }}
+      {{ partial "code_metadata" (dict "page" $item "is_list" 1) }}
       {{ end }}
 
     </div>

@@ -7,6 +7,8 @@
   {{ partial "talk_metadata" (dict "page" $page "is_list" 0) }}
   {{ else if eq $page.Type "publication"}}
   {{ partial "publication_metadata" (dict "page" $page "is_list" 0) }}
+  {{ else if eq $page.Type "code"}}
+  {{ partial "code_metadata" (dict "page" $page "is_list" 0) }}
   {{ end }}
 
   {{ if and (eq $page.Type "post") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}
