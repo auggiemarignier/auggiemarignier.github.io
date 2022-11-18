@@ -1,0 +1,28 @@
+{{ $is_list := .is_list }}
+{{ $page := .page }}
+
+<div>
+    {{ if $page.Params.event_url }}
+    <a href="{{ $page.Params.event_url }}">
+        {{ $page.Params.event | markdownify }}
+    </a>
+    {{ else }}
+    <span>{{ $page.Params.event | markdownify }}</span>
+    {{ end }}
+</div>
+
+{{ if $is_list }}
+<div>
+    <span>
+        {{ partial "functions/get_event_dates" $page }}
+    </span>
+</div>
+{{ else }}
+<div>
+    {{ if $page.Params.location }}
+    {{ $page.Params.location }}{{ with $page.Params.address.city }}, {{ . }}{{ end }}
+    {{ else }}
+    {{ $page.Params.address.city }}
+    {{ end }}
+</div>
+{{ end }}

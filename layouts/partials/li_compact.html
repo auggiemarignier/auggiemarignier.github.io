@@ -25,21 +25,7 @@
 
     <div class="stream-meta article-metadata mt-0">
       {{ if eq $item.Type "talk" }}
-      <div>
-        {{ if $item.Params.event_url }}
-            <a href="{{ $item.Params.event_url }}">
-                {{ $item.Params.event  | markdownify }}
-            </a>
-        {{ else }}
-            <span>{{ $item.Params.event  | markdownify }}</span>
-        {{ end }}
-      </div>
-
-      <div>
-        <span>
-          {{ partial "functions/get_event_dates" $item }}
-        </span>
-      </div>
+      {{ partial "talk_metadata" (dict "page" $item "is_list" 1) }}  
       {{ end }}
 
       {{ if and $show_authors_only $item.Params.authors }}

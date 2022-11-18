@@ -14,22 +14,7 @@
   {{ end }}
 
   {{ if eq $page.Type "talk" }}
-  <div>
-    {{ if $page.Params.event_url }}
-        <a href="{{ $page.Params.event_url }}">
-            {{ $page.Params.event  | markdownify }}
-        </a>
-    {{ else }}
-        {{ $page.Params.event  | markdownify }}
-    {{ end }}
-  </div>
-  <div>
-    {{ if $page.Params.location }}
-        {{ $page.Params.location }}{{ with $page.Params.address.city }}, {{ . }}{{ end }}
-    {{ else }}
-        {{ $page.Params.address.city }}
-    {{ end }}
-  </div>
+  {{ partial "talk_metadata" (dict "page" $page "is_list" 0) }}
   {{ end }}
 
   {{ if eq $page.Type "publication"}}
