@@ -2,7 +2,7 @@
 title: "Proximal MCMC: Towards Building a Sparse Earth Model"
 
 event: "British Seismology Meeting 2022"
-event_url: ""
+event_url: "https://wserv4.esc.cam.ac.uk/bsm/#"
 
 location:  "Downing College"
 address: 
