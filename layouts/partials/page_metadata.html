@@ -15,7 +15,13 @@
 
   {{ if eq $page.Type "talk" }}
   <div>
-    {{ $page.Params.event  | markdownify }}
+    {{ if $page.Params.event_url }}
+        <a href="{{ $page.Params.event_url }}">
+            {{ $page.Params.event  | markdownify }}
+        </a>
+    {{ else }}
+        {{ $page.Params.event  | markdownify }}
+    {{ end }}
   </div>
   <div>
     {{ if $page.Params.location }}

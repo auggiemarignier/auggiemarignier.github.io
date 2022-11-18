@@ -28,8 +28,12 @@
     <div class="stream-meta article-metadata mt-0">
       {{ if eq $item.Type "talk" }}
       <div>
-        {{ with $item.Params.event }}
-        <span>{{ . | markdownify  }}</span>
+        {{ if $item.Params.event_url }}
+            <a href="{{ $item.Params.event_url }}">
+                {{ $item.Params.event  | markdownify }}
+            </a>
+        {{ else }}
+            <span>{{ $item.Params.event  | markdownify }}</span>
         {{ end }}
       </div>
 
