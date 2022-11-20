@@ -14,7 +14,6 @@ authors:
 author_notes: []
 
 date: "14 Sep 2022"
-doi: "10.48550/arXiv.2107.06500"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -45,4 +44,9 @@ links:
   url: https://arxiv.org/abs/2107.06500
   icon_pack: fas
   icon: globe
+- name: DOI
+  url: https://doi.org/10.48550/arXiv.2107.06500
+  icon_pack: ai
+  icon: doi
+
 ---

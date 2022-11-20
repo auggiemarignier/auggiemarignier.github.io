@@ -15,7 +15,6 @@ authors:
 author_notes: []
 
 date: "14 Feb 2020"
-doi: "10.1093/gji/ggaa076"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -37,4 +36,9 @@ links:
   url: https://academic.oup.com/gji/article-abstract/221/2/1232/5736018
   icon_pack: fas
   icon: globe
+- name: DOI
+  url: https://doi.org/10.1093/gji/ggaa076
+  icon_pack: ai
+  icon: doi
+
 ---

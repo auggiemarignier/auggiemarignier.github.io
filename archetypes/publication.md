@@ -11,7 +11,6 @@ authors:
 author_notes: []
 
 date: ""
-doi: ""
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -33,4 +32,8 @@ links:
   url: 
   icon_pack: fas
   icon: globe
+- name: DOI
+  url: 
+  icon_pack: ai
+  icon: doi
 ---

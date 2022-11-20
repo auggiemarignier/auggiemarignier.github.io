@@ -17,7 +17,6 @@ authors:
 author_notes: []
 
 date: "08 Mar 2021"
-doi: "10.48550/arXiv.2010.11661"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -39,4 +38,9 @@ links:
   url: https://arxiv.org/abs/2010.11661
   icon_pack: fas
   icon: globe
+- name: DOI
+  url: https://doi.org/10.48550/arXiv.2010.11661
+  icon_pack: ai
+  icon: doi
+
 ---

@@ -13,7 +13,6 @@ authors:
 author_notes: []
 
 date: "09 Sep 2020"
-doi: "10.1029/2020gc009276"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -35,4 +34,8 @@ links:
   url: https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020GC009276
   icon_pack: fas
   icon: globe
+- name: DOI
+  url: https://doi.org/10.1029/2020gc009276
+  icon_pack: ai
+  icon: doi
 ---
