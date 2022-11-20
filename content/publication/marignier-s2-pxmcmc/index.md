@@ -48,5 +48,8 @@ links:
   url: https://doi.org/10.48550/arXiv.2107.06500
   icon_pack: ai
   icon: doi
-
+- name: Code
+  url: https://github.com/auggiemarignier/pxmcmc
+  icon_pack: fab
+  icon: github
 ---

@@ -38,4 +38,8 @@ links:
   url: https://doi.org/10.1029/2020gc009276
   icon_pack: ai
   icon: doi
+- name: Code
+  url: https://github.com/auggiemarignier/TomoSNR
+  icon_pack: fab
+  icon: github
 ---

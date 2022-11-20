@@ -40,5 +40,4 @@ links:
   url: https://doi.org/10.1093/gji/ggaa076
   icon_pack: ai
   icon: doi
-
 ---
