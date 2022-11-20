@@ -23,12 +23,13 @@ tags: []
 
 featured: false
 
-links: []
-
-url_code: "https://github.com/auggiemarignier/TomoSNR"
-url_pdf: ""
-url_slides: ""
-url_video: ""
-url_poster: "main.pdf"
-
+links:
+- name: Poster
+  url: main.pdf
+  icon_pack: fas
+  icon: scroll
+- name: Code
+  url: https://github.com/auggiemarignier/TomoSNR
+  icon_pack: fab
+  icon: github
 ---

@@ -23,12 +23,21 @@ tags: []
 
 featured: false
 
-links: []
-
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-url_poster: ""
-
+links:
+- name: Slides
+  url: 
+  icon_pack: fas
+  icon: chalkboard-teacher
+- name: Video
+  url: 
+  icon_pack: fas
+  icon: video
+- name: Poster
+  url: 
+  icon_pack: fas
+  icon: scroll
+- name: Code
+  url: 
+  icon_pack: fab
+  icon: github
 ---

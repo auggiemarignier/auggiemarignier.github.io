@@ -25,13 +25,13 @@ tags: []
 
 featured: false
 
-links: []
-
-url_code: "https://github.com/auggiemarignier/pxmcmc"
-url_pdf: ""
-url_slides: "main.pdf"
-url_video: "https://ucl.zoom.us/rec/share/R6fr6BrLkbiDQHMjcxYtKovyHSXwsA_XAWCM0CyRFtMcR0aUlkEZLK91OOidm-xq.OlHPzb0Jjs3LwQOM?startTime=1611507110000
-Passcode: wi$jR17G"
-url_poster: ""
-
+links:
+- name: Slides
+  url: main.pdf
+  icon_pack: fas
+  icon: chalkboard-teacher
+- name: Code
+  url: https://github.com/auggiemarignier/pxmcmc
+  icon_pack: fab
+  icon: github
 ---
