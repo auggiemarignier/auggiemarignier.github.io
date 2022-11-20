@@ -35,5 +35,6 @@ tags: []
 links:
 - name: URL
   url: https://academic.oup.com/gji/article-abstract/221/2/1232/5736018
-
+  icon_pack: fas
+  icon: globe
 ---
