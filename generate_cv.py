@@ -2,6 +2,7 @@ import markdown
 from bs4 import BeautifulSoup
 import os
 import yaml
+from dateutil import parser
 
 content_dir = "content"
 pubs_dir = os.path.join(content_dir, "publication")
@@ -16,5 +17,9 @@ for p in pubs:
             {k: full[k] for k in ("title", "authors", "date", "publication_short")}
         )
 for cont in content:
-    print(yaml.safe_dump(cont))
+    authors = ", ".join(cont["authors"])
+    title = cont["title"]
+    journal = cont["publication_short"]
+    year = str((parser.parse(cont["date"])).year)
+    print(f"{authors} ({year}). {title}. {journal}")
     print("---------------")
