@@ -115,7 +115,7 @@ def write_education(cv):
 
 def write_contact(cv):
     cv.write(f"Email: {reader.content['contact']['email']}  \n")
-    cv.write(f"Address: {', '.join(reader.content['contact']['address'].values())}")
+    cv.write(f"Address: {', '.join(reader.content['contact']['address'].values())}\n")
 
 
 def write_professional(cv):
@@ -163,23 +163,23 @@ if __name__ == "__main__":
     reader.get_talks()
 
     with open(CV, "w") as cv:
-        cv.write("# Dr Augustin Marignier CV \n\n")
+        cv.write("# Dr Augustin Marignier CV  \n\n")
         write_contact(cv)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write("## Education \n\n")
         write_education(cv)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write("## Professional History \n\n")
         write_professional(cv)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write(("## Publications\n\n"))
         write_pubs(cv, reader)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write("## Teaching\n\n")
         write_teaching(cv)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write("## Talks\n\n")
         write_talks(cv, reader)
-        cv.write("\n\n---\n\n")
+        cv.write("\n---\n\n")
         cv.write("## Journal Peer Reviews\n\n")
         write_journals(cv)
