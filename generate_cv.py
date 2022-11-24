@@ -23,6 +23,23 @@ class SiteReader:
                 {k: full[k] for k in ("title", "authors", "year", "publication_short")}
             )
 
+    def get_talks(self):
+        pages = self._get_relevant_pages("talk")
+        if not pages:
+            warnings.warn("No talks found")
+            return
+        for page in pages:
+            full = self._read_indexmd(page)
+            is_talk = False
+            for link in full["links"]:
+                if link and link["name"] in ("Slides",):
+                    is_talk = True
+                    break
+            if is_talk:
+                d = {k: full[k] for k in ("title", "event", "date")}
+                d["date"] = parser.parse(d["date"])
+                self.content["talks"].append(d)
+
     def _find_pages(self):
         self.pages = []
         for root, _, files in os.walk(self.content_dir):
@@ -52,6 +69,7 @@ if __name__ == "__main__":
     CV = os.path.join(content_dir, "cv", "_index.md")
     reader = SiteReader(content_dir)
     reader.get_publications()
+    reader.get_talks()
 
     with open(CV, "w") as cv:
         cv.write("# Dr Augustin Marignier CV \n\n---\n\n")
@@ -64,3 +82,10 @@ if __name__ == "__main__":
             journal = cont["publication_short"]
             year = cont["year"]
             cv.write(f"{authors} ({year}). {title}. {journal}  \n\n")
+        cv.write("\n\n---\n\n")
+        cv.write("## Talks\n\n")
+        for cont in sorted(reader.content["talks"], key=lambda d: d["date"]):
+            title = cont["title"]
+            event = cont["event"]
+            date = cont["date"].strftime("%d/%m/%y")
+            cv.write(f"{title}  \n*{event}*. {date}  \n\n")
