@@ -18,10 +18,9 @@ class SiteReader:
             return
         for page in pages:
             full = self._read_indexmd(page)
-            full["year"] = str((parser.parse(full["date"])).year)
-            self.content["publications"].append(
-                {k: full[k] for k in ("title", "authors", "year", "publication_short")}
-            )
+            d = {k: full[k] for k in ("title", "authors", "date", "publication_short")}
+            d["date"] = parser.parse(d["date"])
+            self.content["publications"].append(d)
 
     def get_talks(self):
         pages = self._get_relevant_pages("talk")
@@ -75,12 +74,12 @@ if __name__ == "__main__":
         cv.write("# Dr Augustin Marignier CV \n\n---\n\n")
         cv.write(("## Publications\n\n"))
         for cont in sorted(
-            reader.content["publications"], key=lambda d: d["year"], reverse=True
+            reader.content["publications"], key=lambda d: d["date"], reverse=True
         ):
             authors = ", ".join(cont["authors"])
             title = cont["title"]
             journal = cont["publication_short"]
-            year = cont["year"]
+            year = cont["date"].strftime("%Y")
             cv.write(f"{authors} ({year}). {title}. {journal}  \n\n")
         cv.write("\n\n---\n\n")
         cv.write("## Talks\n\n")
