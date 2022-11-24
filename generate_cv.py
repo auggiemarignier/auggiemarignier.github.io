@@ -8,7 +8,7 @@ class SiteReader:
     def __init__(self, content_dir):
         self.content_dir = content_dir
         self.pubs_dir = os.path.join(self.content_dir, "publication")
-        self.content = {"publications": [], "talks": [], "codes": []}
+        self.content = {"publications": [], "talks": [], "codes": [], "contact": {}}
         self._find_pages()
 
     def get_publications(self):
@@ -38,6 +38,15 @@ class SiteReader:
                 d = {k: full[k] for k in ("title", "event", "date")}
                 d["date"] = parser.parse(d["date"])
                 self.content["talks"].append(d)
+
+    def get_contact(self):
+        params_file = os.path.join(self.content_dir, "..", "config", "_default", "params.yaml")
+        with open(params_file, "r") as f:
+            params = yaml.safe_load(f)
+        self.content["contact"]["email"] = params["email"]
+        self.content["contact"]["address"] = params["address"]
+        if self.content["contact"]["address"]["country_code"]:
+            del self.content["contact"]["address"]["country"]
 
     def _find_pages(self):
         self.pages = []
@@ -86,11 +95,14 @@ if __name__ == "__main__":
     content_dir = "content"
     CV = os.path.join(content_dir, "cv", "_index.md")
     reader = SiteReader(content_dir)
+    reader.get_contact()
     reader.get_publications()
     reader.get_talks()
 
     with open(CV, "w") as cv:
-        cv.write("# Dr Augustin Marignier CV \n\n---\n\n")
+        cv.write("# Dr Augustin Marignier CV \n\n")
+        cv.write(f"Email: {reader.content['contact']['email']}  \n")
+        cv.write(f"Address: {', '.join(reader.content['contact']['address'].values())}\n\n---\n\n")
         cv.write(("## Publications\n\n"))
         write_pubs(cv, reader)
         cv.write("\n\n---\n\n")
