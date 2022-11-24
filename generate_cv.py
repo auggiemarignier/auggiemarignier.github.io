@@ -19,6 +19,9 @@ class SiteReader:
         for page in pages:
             full = self._read_indexmd(page)
             d = {k: full[k] for k in ("title", "authors", "date", "publication_short")}
+            for i, author in enumerate(d["authors"]):
+                if "Marignier" in author:
+                    d["authors"][i] = f"**{d['authors'][i]}**"
             d["date"] = parser.parse(d["date"])
             self.content["publications"].append(d)
 
@@ -80,7 +83,7 @@ def write_pubs(cv_file, reader):
         title = cont["title"]
         journal = cont["publication_short"]
         year = cont["date"].strftime("%Y")
-        cv_file.write(f"{authors} ({year}). {title}. {journal}  \n\n")
+        cv_file.write(f"* {authors} ({year}). {title}. {journal}\n")
 
 
 def write_talks(cv_file, reader):
@@ -88,7 +91,7 @@ def write_talks(cv_file, reader):
         title = cont["title"]
         event = cont["event"]
         date = cont["date"].strftime("%d/%m/%y")
-        cv_file.write(f"{title}  \n*{event}*. {date}  \n\n")
+        cv_file.write(f"* {title}  \n*{event}*. {date}\n")
 
 
 if __name__ == "__main__":
