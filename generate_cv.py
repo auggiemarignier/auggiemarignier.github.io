@@ -13,13 +13,14 @@ for p in pubs:
         text = f.read()
         text = text[3:-3]  # trim --- at start and end of file
         full = yaml.safe_load(text)
+        full["year"] = str((parser.parse(full["date"])).year)
         content.append(
-            {k: full[k] for k in ("title", "authors", "date", "publication_short")}
+            {k: full[k] for k in ("title", "authors", "year", "publication_short")}
         )
-for cont in content:
+for cont in sorted(content, key=lambda d: d["year"], reverse=True):
     authors = ", ".join(cont["authors"])
     title = cont["title"]
     journal = cont["publication_short"]
-    year = str((parser.parse(cont["date"])).year)
+    year = cont["year"]
     print(f"{authors} ({year}). {title}. {journal}")
     print("---------------")
