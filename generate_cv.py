@@ -147,6 +147,13 @@ def write_journals(cv):
         cv.write(f"* {journal}\n")
 
 
+def write_teaching(cv):
+    cv.write("2021 - 2022 &emsp; Machine Learning with Big Data, UCL  \n")
+    cv.write("2019 - 2021 &emsp; Seismology II, UCL  \n")
+    cv.write("2019 - 2021 &emsp; Field Geophysics, UCL  \n")
+    cv.write("2017 - 2021 &emsp; MATLAB, UCL  \n")
+
+
 if __name__ == "__main__":
     content_dir = "content"
     CV = os.path.join(content_dir, "cv", "_index.md")
@@ -167,6 +174,9 @@ if __name__ == "__main__":
         cv.write("\n\n---\n\n")
         cv.write(("## Publications\n\n"))
         write_pubs(cv, reader)
+        cv.write("\n\n---\n\n")
+        cv.write("## Teaching\n\n")
+        write_teaching(cv)
         cv.write("\n\n---\n\n")
         cv.write("## Talks\n\n")
         write_talks(cv, reader)
