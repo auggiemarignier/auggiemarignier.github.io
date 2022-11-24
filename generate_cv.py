@@ -63,6 +63,25 @@ class SiteReader:
             return yaml.safe_load(text)
 
 
+def write_pubs(cv_file, reader):
+    for cont in sorted(
+        reader.content["publications"], key=lambda d: d["date"], reverse=True
+    ):
+        authors = ", ".join(cont["authors"])
+        title = cont["title"]
+        journal = cont["publication_short"]
+        year = cont["date"].strftime("%Y")
+        cv_file.write(f"{authors} ({year}). {title}. {journal}  \n\n")
+
+
+def write_talks(cv_file, reader):
+    for cont in sorted(reader.content["talks"], key=lambda d: d["date"]):
+        title = cont["title"]
+        event = cont["event"]
+        date = cont["date"].strftime("%d/%m/%y")
+        cv_file.write(f"{title}  \n*{event}*. {date}  \n\n")
+
+
 if __name__ == "__main__":
     content_dir = "content"
     CV = os.path.join(content_dir, "cv", "_index.md")
@@ -73,18 +92,7 @@ if __name__ == "__main__":
     with open(CV, "w") as cv:
         cv.write("# Dr Augustin Marignier CV \n\n---\n\n")
         cv.write(("## Publications\n\n"))
-        for cont in sorted(
-            reader.content["publications"], key=lambda d: d["date"], reverse=True
-        ):
-            authors = ", ".join(cont["authors"])
-            title = cont["title"]
-            journal = cont["publication_short"]
-            year = cont["date"].strftime("%Y")
-            cv.write(f"{authors} ({year}). {title}. {journal}  \n\n")
+        write_pubs(cv, reader)
         cv.write("\n\n---\n\n")
         cv.write("## Talks\n\n")
-        for cont in sorted(reader.content["talks"], key=lambda d: d["date"]):
-            title = cont["title"]
-            event = cont["event"]
-            date = cont["date"].strftime("%d/%m/%y")
-            cv.write(f"{title}  \n*{event}*. {date}  \n\n")
+        write_talks(cv, reader)
