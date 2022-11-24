@@ -4,7 +4,9 @@ import os
 import yaml
 from dateutil import parser
 
+
 content_dir = "content"
+CV = os.path.join(content_dir, "cv", "_index.md")
 pubs_dir = os.path.join(content_dir, "publication")
 pubs = [d for d in os.listdir(pubs_dir) if d != "_index.md"]
 content = []
@@ -24,3 +26,11 @@ for cont in sorted(content, key=lambda d: d["year"], reverse=True):
     year = cont["year"]
     print(f"{authors} ({year}). {title}. {journal}")
     print("---------------")
+
+with open(CV, "w") as cv:
+    for cont in sorted(content, key=lambda d: d["year"], reverse=True):
+        authors = ", ".join(cont["authors"])
+        title = cont["title"]
+        journal = cont["publication_short"]
+        year = cont["year"]
+        cv.write(f"{authors} ({year}). {title}. {journal}  \n\n")
