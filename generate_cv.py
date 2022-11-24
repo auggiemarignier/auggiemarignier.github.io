@@ -75,7 +75,7 @@ class SiteReader:
             return yaml.safe_load(text)
 
 
-def write_pubs(cv_file, reader):
+def write_pubs(cv, reader):
     for cont in sorted(
         reader.content["publications"], key=lambda d: d["date"], reverse=True
     ):
@@ -83,15 +83,40 @@ def write_pubs(cv_file, reader):
         title = cont["title"]
         journal = cont["publication_short"]
         year = cont["date"].strftime("%Y")
-        cv_file.write(f"* {authors} ({year}). {title}. {journal}\n")
+        cv.write(f"* {authors} ({year}). {title}. {journal}\n")
 
 
-def write_talks(cv_file, reader):
+def write_talks(cv, reader):
     for cont in sorted(reader.content["talks"], key=lambda d: d["date"]):
         title = cont["title"]
         event = cont["event"]
         date = cont["date"].strftime("%d/%m/%y")
-        cv_file.write(f"* {title}  \n*{event}*. {date}\n")
+        cv.write(f"* {title}  \n*{event}*. {date}\n")
+
+
+def write_education(cv):
+    cv.write("2022 &emsp; PhD Data Intensive Science, University College London  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; *From Dark Matter to the Earth's Deep Interior: There and Back Again*  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira and Prof Thomas Kitching  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; Submitted 30/9/22, Defended 6/12/22\n\n")
+    cv.write("2018 &emsp; MSci Geophysics, University College London  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; First Class Honours  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structre*  \n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira\n")
+
+
+def write_contact(cv):
+    cv.write(f"Email: {reader.content['contact']['email']}  \n")
+    cv.write(f"Address: {', '.join(reader.content['contact']['address'].values())}")
+
+
+def write_professional(cv):
+    cv.write("Jan 23 - Dec 23 &emsp; PDRA Seismology, Research School of Earth Sciences, ANU  \n")
+    cv.write("Sep 22 - Dec 22 &emsp;PDRA Seismology, Department of Earth Sciences, UCL  \n")
+    cv.write("Jun 22 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Scientist, Land seismometer deployment, Azores  \n")
+    cv.write("Jun 21 - Aug 21 &emsp; Scientist, UPFLOW Ocean-bottom Seismometer deployment, Atlantic Ocean  \n")
+    cv.write("Oct 19 - May 20 &ensp; Machine Learning Intern, KageNova Ltd.  \n")
+    cv.write("Oct 18 - Sep 22 &emsp; PhD Student, Centre for Doctoral Training in Data Intensive Science, UCL  \n")
 
 
 if __name__ == "__main__":
@@ -104,18 +129,13 @@ if __name__ == "__main__":
 
     with open(CV, "w") as cv:
         cv.write("# Dr Augustin Marignier CV \n\n")
-        cv.write(f"Email: {reader.content['contact']['email']}  \n")
-        cv.write(f"Address: {', '.join(reader.content['contact']['address'].values())}")
+        write_contact(cv)
         cv.write("\n\n---\n\n")
         cv.write("## Education \n\n")
-        cv.write("2022 &emsp; PhD Data Intensive Science, University College London  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; *From Dark Matter to the Earth's Deep Interior: There and Back Again*  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira and Prof Thomas Kitching  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; Submitted 30/9/22, Defended 6/12/22\n\n")
-        cv.write("2018 &emsp; MSci Geophysics, University College London  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; First Class Honours  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structre*  \n")
-        cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira\n")
+        write_education(cv)
+        cv.write("\n\n---\n\n")
+        cv.write("## Professional History \n\n")
+        write_professional(cv)
         cv.write("\n\n---\n\n")
         cv.write(("## Publications\n\n"))
         write_pubs(cv, reader)
