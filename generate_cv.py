@@ -43,7 +43,9 @@ class SiteReader:
                 self.content["talks"].append(d)
 
     def get_contact(self):
-        params_file = os.path.join(self.content_dir, "..", "config", "_default", "params.yaml")
+        params_file = os.path.join(
+            self.content_dir, "..", "config", "_default", "params.yaml"
+        )
         with open(params_file, "r") as f:
             params = yaml.safe_load(f)
         self.content["contact"]["email"] = params["email"]
@@ -96,12 +98,18 @@ def write_talks(cv, reader):
 
 def write_education(cv):
     cv.write("2022 &emsp; PhD Data Intensive Science, University College London  \n")
-    cv.write("&emsp;&emsp;&emsp;&ensp; *From Dark Matter to the Earth's Deep Interior: There and Back Again*  \n")
-    cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira and Prof Thomas Kitching  \n")
+    cv.write(
+        "&emsp;&emsp;&emsp;&ensp; *From Dark Matter to the Earth's Deep Interior: There and Back Again*  \n"
+    )
+    cv.write(
+        "&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira and Prof Thomas Kitching  \n"
+    )
     cv.write("&emsp;&emsp;&emsp;&ensp; Submitted 30/9/22, Defended 6/12/22\n\n")
     cv.write("2018 &emsp; MSci Geophysics, University College London  \n")
     cv.write("&emsp;&emsp;&emsp;&ensp; First Class Honours  \n")
-    cv.write("&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structre*  \n")
+    cv.write(
+        "&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structre*  \n"
+    )
     cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira\n")
 
 
@@ -111,12 +119,32 @@ def write_contact(cv):
 
 
 def write_professional(cv):
-    cv.write("Jan 23 - Dec 23 &emsp; PDRA Seismology, Research School of Earth Sciences, ANU  \n")
-    cv.write("Sep 22 - Dec 22 &emsp;PDRA Seismology, Department of Earth Sciences, UCL  \n")
-    cv.write("Jun 22 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Scientist, Land seismometer deployment, Azores  \n")
-    cv.write("Jun 21 - Aug 21 &emsp; Scientist, UPFLOW Ocean-bottom Seismometer deployment, Atlantic Ocean  \n")
+    cv.write(
+        "Jan 23 - Dec 23 &emsp; PDRA Seismology, Research School of Earth Sciences, ANU  \n"
+    )
+    cv.write(
+        "Sep 22 - Dec 22 &emsp;PDRA Seismology, Department of Earth Sciences, UCL  \n"
+    )
+    cv.write(
+        "Jun 22 &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Scientist, Land seismometer deployment, Azores  \n"
+    )
+    cv.write(
+        "Jun 21 - Aug 21 &emsp; Scientist, UPFLOW Ocean-bottom Seismometer deployment, Atlantic Ocean  \n"
+    )
     cv.write("Oct 19 - May 20 &ensp; Machine Learning Intern, KageNova Ltd.  \n")
-    cv.write("Oct 18 - Sep 22 &emsp; PhD Student, Centre for Doctoral Training in Data Intensive Science, UCL  \n")
+    cv.write(
+        "Oct 18 - Sep 22 &emsp; PhD Student, Centre for Doctoral Training in Data Intensive Science, UCL  \n"
+    )
+
+
+def write_journals(cv):
+    journals = [
+        "Geophysical Journal International",
+        "Journal of Geophysical Research - Solid Earth",
+        "Physics of the Earth and Planetary Interiors",
+    ]
+    for journal in journals:
+        cv.write(f"* {journal}\n")
 
 
 if __name__ == "__main__":
@@ -142,3 +170,6 @@ if __name__ == "__main__":
         cv.write("\n\n---\n\n")
         cv.write("## Talks\n\n")
         write_talks(cv, reader)
+        cv.write("\n\n---\n\n")
+        cv.write("## Journal Peer Reviews\n\n")
+        write_journals(cv)
