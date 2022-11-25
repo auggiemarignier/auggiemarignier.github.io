@@ -1,0 +1,18 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <a href="/uploads/cv.pdf" target="_blank">
+                <i class="fas fa-file-pdf"></i> Download PDF
+            </a>
+            {{ with .Content }}
+            <div class="article-style">{{ . }}</div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{- end -}}
