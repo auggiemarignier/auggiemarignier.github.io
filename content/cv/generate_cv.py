@@ -2,6 +2,7 @@ import os
 import yaml
 from dateutil import parser
 import warnings
+import subprocess
 
 
 class SiteReader:
@@ -108,7 +109,7 @@ def write_education(cv):
     cv.write("2018 &emsp; MSci Geophysics, University College London  \n")
     cv.write("&emsp;&emsp;&emsp;&ensp; First Class Honours  \n")
     cv.write(
-        "&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structre*  \n"
+        "&emsp;&emsp;&emsp;&ensp; *Rayleigh wave ellipticity inversion for crustal velocity structure*  \n"
     )
     cv.write("&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira\n")
 
@@ -183,3 +184,18 @@ if __name__ == "__main__":
         cv.write("\n")
         cv.write("## Journal Peer Reviews\n\n")
         write_journals(cv)
+
+    subprocess.run(
+        [
+            "pandoc",
+            CV,
+            "--variable",
+            "geometry=margin=0.5in",
+            "--variable",
+            "pagestyle=empty",
+            "-o",
+            os.path.join(content_dir, '..', 'static', 'uploads', 'cv.pdf'),
+            "--pdf-engine",
+            "xelatex",
+        ]
+    )
