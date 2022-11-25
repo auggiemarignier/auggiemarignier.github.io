@@ -155,7 +155,7 @@ def write_teaching(cv):
 
 
 if __name__ == "__main__":
-    content_dir = "content"
+    content_dir = ".."
     CV = os.path.join(content_dir, "cv", "_index.md")
     reader = SiteReader(content_dir)
     reader.get_contact()
