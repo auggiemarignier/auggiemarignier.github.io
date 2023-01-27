@@ -36,13 +36,13 @@ jobs:
       - uses: docker://pandoc/latex
         with:
             args: >-
-                /home/runner/work/auggiemarignier.github.io/auggiemarignier.github.io/content/cv/_index.md
+                /github/workspace/content/cv/_index.md
                 --variable
                 geometry=margin=0.5in
                 --variable
                 pagestyle=empty
                 -o
-                /home/runner/work/auggiemarignier.github.io/auggiemarignier.github.io/static/uploads/cv.pdf
+                /github/workspace/static/uploads/cv.pdf
                 --pdf-engine
                 xelatex
     
