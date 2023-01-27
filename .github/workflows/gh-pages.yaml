@@ -23,6 +23,9 @@ jobs:
           pip install -r requirements.txt
           cd ${GITHUB_WORKSPACE}/content/cv
           python generate_cv.py
+          pwd
+          ls ..
+          ls ../cv
       - uses: docker://pandoc/latex
         with:
             args: >-
