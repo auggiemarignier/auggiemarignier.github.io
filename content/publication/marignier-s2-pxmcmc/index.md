@@ -13,7 +13,7 @@ authors:
 # Author notes (optional)
 author_notes: []
 
-date: "14 Sep 2022"
+date: "02 Jan 2023"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -22,8 +22,8 @@ date: "14 Sep 2022"
 publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Royal Astronomical Society Techniques and Instruments, under review*"
-publication_short: "*RASTI, under review*"
+publication: "*Royal Astronomical Society Techniques and Instruments*"
+publication_short: "*RASTI*"
 
 abstract:     In this work, we describe a framework for solving spherical inverse imaging problems using posterior sampling for full uncertainty quantification.
     Inverse imaging problems defined on the sphere arise in many fields, including seismology and cosmology where images are defined on the globe and the cosmic sphere, and are generally high-dimensional and computationally expensive.
@@ -45,7 +45,7 @@ links:
   icon_pack: fas
   icon: globe
 - name: DOI
-  url: https://doi.org/10.48550/arXiv.2107.06500
+  url: https://doi.org/10.1093/rasti/rzac010
   icon_pack: ai
   icon: doi
 - name: Code
