@@ -56,5 +56,8 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
+I am a postdoc in the Seismology & Mathematical Geophysics group at RSES at ANU, currently looking at characterising the sedimentary thickness across Australia using passive seismic methods.
+
+I completed my PhD in Data Intensive Science at UCL in 2022.  My research focused on solving large-scale inverse imaging problems using probabilistic methods, applied to seismological and cosmological problems.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}resumé{{< /staticref >}}.
