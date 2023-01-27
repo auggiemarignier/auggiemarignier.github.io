@@ -9,17 +9,21 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-22.04
+    outputs:
+        md: ${{ steps.generate_cv.outputs.md }}
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Generate CV
+      - name: Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: |
+      - name: Generate CV
+        id: generate_cv
+        run: |
           pip install -r requirements.txt
           cd ${GITHUB_WORKSPACE}/content/cv
           python generate_cv.py
@@ -30,10 +34,11 @@ jobs:
           echo ${GITHUB_WORKSPACE}
           pwd
           ls ${GITHUB_WORKSPACE}/content/cv
+          echo ${{ steps.generate_cv.outputs.md }}
       - uses: docker://pandoc/latex
         with:
             args: >-
-                ${GITHUB_WORKSPACE}/content/cv/_index.md
+                ${{ steps.generate_cv.outputs.files }}
                 --variable
                 geometry=margin=0.5in
                 --variable
