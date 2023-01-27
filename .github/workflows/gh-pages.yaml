@@ -32,6 +32,7 @@ jobs:
           echo ${GITHUB_WORKSPACE}
           pwd
           ls ${GITHUB_WORKSPACE}/content/cv
+      - run: cat ${GITHUB_WORKSPACE}/content/cv/_index.md
       - uses: docker://pandoc/latex
         with:
             args: >-
