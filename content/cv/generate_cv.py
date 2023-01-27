@@ -201,4 +201,4 @@ if __name__ == "__main__":
             ]
         )
     except FileNotFoundError:
-        raise SystemExit("pandoc failed.  Only _index.md has been created")
+        warnings.warn("pandoc failed.  Only _index.md has been created")
