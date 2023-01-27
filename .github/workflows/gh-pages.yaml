@@ -9,8 +9,6 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-22.04
-    outputs:
-        md: ${{ steps.generate_cv.outputs.md }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -34,17 +32,16 @@ jobs:
           echo ${GITHUB_WORKSPACE}
           pwd
           ls ${GITHUB_WORKSPACE}/content/cv
-          echo ${{ steps.generate_cv.outputs.md }}
       - uses: docker://pandoc/latex
         with:
             args: >-
-                ${{ steps.generate_cv.outputs.files }}
+                /home/runner/work/auggiemarignier.github.io/auggiemarignier.github.io/content/cv/_index.md
                 --variable
                 geometry=margin=0.5in
                 --variable
                 pagestyle=empty
                 -o
-                ${GITHUB_WORKSPACE}/static/uploads/cv.pdf
+                /home/runner/work/auggiemarignier.github.io/auggiemarignier.github.io/static/uploads/cv.pdf
                 --pdf-engine
                 xelatex
     
