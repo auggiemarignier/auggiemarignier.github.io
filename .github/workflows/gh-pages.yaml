@@ -23,6 +23,18 @@ jobs:
           pip install -r requirements.txt
           cd content/cv
           python generate_cv.py
+      - uses: docker://pandoc/latex
+        with:
+            args: >-
+                _index.md
+                --variable
+                geometry=margin=0.5in
+                --variable
+                pagestyle=empty
+                -o
+                ${GITHUB_WORKSPACE}/static/uploads/cv.pdf
+                --pdf-engine
+                xelatex
     
   deploy:
     runs-on: ubuntu-22.04
