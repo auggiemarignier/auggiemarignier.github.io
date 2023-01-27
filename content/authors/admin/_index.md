@@ -6,12 +6,12 @@ title: Auggie Marignier
 superuser: true
 
 # Role/position/tagline
-role: Postdoctoral Research Associate in Seismology
+role: Postdoctoral Fellow in Seismology
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: University College London
-  url: https://www.ucl.ac.uk/
+- name: Research School of Earth Sciences, Australian National University
+  url: https://earthsciences.anu.edu.au/
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -22,16 +22,6 @@ interests:
 - Seismology
 - Cosmology
 
-# Education to show in About widget
-education:
-  courses:
-  - course: PhD in Data Intensive Science
-    institution: UCL
-    year: 2022
-  - course: MSci Geophysics
-    institution: UCL
-    year: 2018
-
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
@@ -39,7 +29,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:augustin.marignier.14@ucl.ac.uk'
+  link: 'mailto:augustin.marignier@anu.edu.au'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/auggiem23
@@ -67,4 +57,4 @@ email: ""
 highlight_name: true
 ---
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}resumé{{< /staticref >}}.
