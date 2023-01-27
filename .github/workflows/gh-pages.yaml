@@ -19,20 +19,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
       - name: Generate CV
         id: generate_cv
         run: |
           pip install -r requirements.txt
           cd ${GITHUB_WORKSPACE}/content/cv
           python generate_cv.py
-          pwd
-          ls ..
-          ls ../cv
-      - run: |
-          echo ${GITHUB_WORKSPACE}
-          pwd
-          ls ${GITHUB_WORKSPACE}/content/cv
-      - run: cat ${GITHUB_WORKSPACE}/content/cv/_index.md
+
       - uses: docker://pandoc/latex
         with:
             args: >-
@@ -46,9 +40,6 @@ jobs:
                 --pdf-engine
                 xelatex
     
-  deploy:
-    runs-on: ubuntu-22.04
-    steps:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
