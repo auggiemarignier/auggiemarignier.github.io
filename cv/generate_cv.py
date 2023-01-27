@@ -185,17 +185,20 @@ if __name__ == "__main__":
         write_education(cv)
         cv.write("\n")
 
-    subprocess.run(
-        [
-            "pandoc",
-            CV,
-            "--variable",
-            "geometry=margin=0.5in",
-            "--variable",
-            "pagestyle=empty",
-            "-o",
-            os.path.join(content_dir, '..', 'static', 'uploads', 'cv.pdf'),
-            "--pdf-engine",
-            "xelatex",
-        ]
-    )
+    try:
+        subprocess.run(
+            [
+                "pandoc",
+                CV,
+                "--variable",
+                "geometry=margin=0.5in",
+                "--variable",
+                "pagestyle=empty",
+                "-o",
+                os.path.join(content_dir, '..', 'static', 'uploads', 'cv.pdf'),
+                "--pdf-engine",
+                "xelatex",
+            ]
+        )
+    except FileNotFoundError:
+        warnings.warn("pandoc failed.  Only _index.md has been created")
