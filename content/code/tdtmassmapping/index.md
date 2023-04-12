@@ -19,5 +19,8 @@ links:
   url: https://github.com/auggiemarignier/tdtmassmapping
   icon_pack: fab
   icon: github
-
+- name: Paper
+  url: /publication/marignier-tdtmm
+  icon_pack: fas
+  icon: scroll
 ---
