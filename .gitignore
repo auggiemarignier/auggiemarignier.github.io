@@ -7,3 +7,7 @@ public/
 jsconfig.json
 node_modules/
 .hugo_build.lock
+
+# Generated CV
+static/uploads/cv.pdf
+content/cv/_index.md
