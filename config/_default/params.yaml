@@ -24,7 +24,7 @@ email: augustin.marignier@anu.edu.au
 address: 
   street: Research School of Earth Sciences, Australian National University
   city: Canberra
-  postcode: 2600
+  postcode: '2600'
   country: Australia
   country_code: AUS
 
