@@ -16,17 +16,17 @@ site_type: Person
 local_business_type: ''
 org_name: ''
 description: ''
-twitter: ''
+twitter: 'auggiem23'
 
 # Contact (edit or remove options as required)
 
-email: augustin.marignier.14@ucl.ac.uk
+email: augustin.marignier@anu.edu.au
 address: 
-  street: Department of Earth Sciences, University College London
-  city: London
-  postcode: WC1E 6BT
-  country: United Kingdom
-  country_code: UK
+  street: Research School of Earth Sciences, Australian National University
+  city: Canberra
+  postcode: 2600
+  country: Australia
+  country_code: AUS
 
 # Site header
 
@@ -120,7 +120,7 @@ map:
 marketing:
   google_analytics: ''
   google_tag_manager: ''
-  google_site_verification: ''
+  google_site_verification: '9QrQ_r9NQTkCG4DaQY9A1YpZ3MGIPJZ52X2BP7UAMso'
   baidu_site_verification: ''
   baidu_tongji: ''
 icon:
