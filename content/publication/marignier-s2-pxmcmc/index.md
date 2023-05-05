@@ -41,7 +41,7 @@ tags: []
 # Custom links (uncomment lines below)
 links:
 - name: URL
-  url: https://arxiv.org/abs/2107.06500
+  url: https://doi.org/10.1093/rasti/rzac010
   icon_pack: fas
   icon: globe
 - name: DOI

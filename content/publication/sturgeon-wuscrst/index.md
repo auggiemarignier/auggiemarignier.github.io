@@ -35,10 +35,10 @@ links:
   url: https://www.authorea.com/doi/full/10.1002/essoar.10512994.1
   icon_pack: fas
   icon: globe
-- name: DOI
-  url: https://doi.org/10.1002/essoar.10512994.1
-  icon_pack: ai
-  icon: doi
+# - name: DOI
+#   url:
+#   icon_pack: ai
+#   icon: doi
 # - name: Code
 #   url: 
 #   icon_pack: fab
