@@ -1,0 +1,6 @@
+{{/* Display author list. */}}
+
+{{ $n_authors := len $.Params.authors}}
+{{ range $index, $author :=  $.Params.authors }}
+    {{ $author }}{{ if ne (add $index 1) $n_authors }},{{ end }}
+{{ end }}
