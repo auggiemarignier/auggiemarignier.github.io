@@ -13,17 +13,17 @@ authors:
 # Author notes (optional)
 author_notes: []
 
-date: "25 Nov 2022"
+date: "19 Jun 2023"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Open Journal of Astrophysics, under review*"
-publication_short: "*OJA, under review*"
+publication: "*Open Journal of Astrophysics*"
+publication_short: "*OJA*"
 
 abstract:     Uncertainty quantification is a crucial step of cosmological mass-mapping that is often ignored.
     Suggested methods are typically only approximate or make strong assumptions of Gaussianity of the shear field.
@@ -41,11 +41,11 @@ tags: []
 # Custom links (uncomment lines below)
 links:
 - name: URL
-  url: https://arxiv.org/abs/2211.13963
+  url: https://astro.theoj.org/article/81253-sparse-bayesian-mass-mapping-using-trans-dimensional-mcmc
   icon_pack: fas
   icon: globe
 - name: DOI
-  url: https://doi.org/10.48550/arXiv.2211.13963
+  url: https://doi.org/10.21105/astro.2211.13963
   icon_pack: ai
   icon: doi
 - name: Code
