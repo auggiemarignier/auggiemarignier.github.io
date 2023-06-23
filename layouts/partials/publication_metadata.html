@@ -7,10 +7,10 @@
 </div>
 {{ if eq $is_list 1}}
 <div class="pub-publication">
-    {{ if $page.Params.publication_short }}
-    {{ $page.Params.publication_short | markdownify }}
-    {{ else if $page.Params.publication }}
+    {{ if $page.Params.publication }}
     {{ $page.Params.publication | markdownify }}
+    {{ else if $page.Params.publication_short }}
+    {{ $page.Params.publication_short | markdownify }}
     {{ end }}
 </div>
 {{ else }}
