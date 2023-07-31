@@ -10,7 +10,7 @@ authors:
 # Author notes (optional)
 author_notes: []
 
-date: "26 July 2023"
+date: "26 Jul 2023"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
