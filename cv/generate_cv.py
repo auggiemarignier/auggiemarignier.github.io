@@ -105,7 +105,7 @@ def write_education(cv):
     cv.write(
         "&emsp;&emsp;&emsp;&ensp; Supervised by Prof Ana Ferreira and Prof Thomas Kitching  \n"
     )
-    cv.write("&emsp;&emsp;&emsp;&ensp; Submitted 30/9/22, Defended 6/12/22\n\n")
+    cv.write("&emsp;&emsp;&emsp;&ensp; Submitted 30/9/22, Defended 6/12/22, Awarded 28/1/23 \n\n")
     cv.write("2018 &emsp; MSci Geophysics, University College London  \n")
     cv.write("&emsp;&emsp;&emsp;&ensp; First Class Honours  \n")
     cv.write(
@@ -181,6 +181,7 @@ if __name__ == "__main__":
         cv.write("\n")
         cv.write("## Journal Peer Reviews\n\n")
         write_journals(cv)
+        cv.write("\n")
         cv.write("## Education \n\n")
         write_education(cv)
         cv.write("\n")
