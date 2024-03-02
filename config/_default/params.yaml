@@ -38,7 +38,7 @@ header:
     # Align menu links: `left`, `center`, or `right`
     align: "left"
     # Fix the navigation bar to the top of the page
-    fixed_to_top: false
+    fixed_to_top: true
     # Let the user choose between light or dark mode?
     show_theme_chooser: true
     # Let the user search from the navigation bar?
