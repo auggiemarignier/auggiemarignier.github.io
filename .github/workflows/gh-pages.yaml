@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
+          submodules: recursive  # Fetch Hugo themes (true OR recursive) and CV
+          token: ${{ secrets.GH_PAT }}  # authenticate access to CV
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Python
