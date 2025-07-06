@@ -88,6 +88,15 @@ def sort_bibtex_entries(bib_file: Path) -> None:
     writer.write_file(sorted_bib, bib_file)
 
 
+def add_publications_section_header() -> None:
+    """
+    Add a publications section header to the CV.
+    This is a workaround for pandoc not handling the bibliography correctly.
+    """
+    with open(CV_SOURCE_PATH / "cv.tex", "a", encoding="utf-8") as f:
+        f.write("\n\n\\section{Publications}\n")
+
+
 def call_pandoc() -> None:
     """
     Call pandoc to convert the cleaned latex source to markdown.
@@ -116,6 +125,7 @@ def main() -> None:
     os.chdir(CV_SOURCE_PATH)
     source_files = get_source_files()
     clean_source_files(source_files)
+    add_publications_section_header()
     sort_bibtex_entries(CV_SOURCE_PATH / "publications.bib")
     call_pandoc()
 
