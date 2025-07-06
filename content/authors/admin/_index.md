@@ -29,10 +29,10 @@ interests:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:augustin.marignier@anu.edu.au'
-- icon: twitter
+  link: 'mailto:auggie.marignier@earth.ox.ac.uk'
+- icon: linkedin
   icon_pack: fab
-  link: https://twitter.com/auggiem23
+  link: https://linkedin.com/in/auggie-marignier-853523326
 - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: fas
   link: https://scholar.google.co.uk/citations?user=9L1UbdoAAAAJ&hl
@@ -56,8 +56,8 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-I am a postdoc in the Seismology & Mathematical Geophysics group at RSES at ANU, currently looking at characterising the sedimentary thickness across Australia using passive seismic methods.
+I currently am a Schmidt AI in Science Fellow at the Department of Earth Sciences at the University of Oxford, investigating AI methods for seismic imaging of the Earth's inner core.
+
+Recently, I was a postdoc in the Seismology & Mathematical Geophysics group at RSES at ANU, looking at estimating continental-scale sediment thickness with passive seismic methods, and regularisation approaches in geophysical imaging.
 
 I completed my PhD in Data Intensive Science at UCL in 2022.  My research focused on solving large-scale inverse imaging problems using probabilistic methods, applied to seismological and cosmological problems.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/cv.pdf" "newtab" >}}resumé{{< /staticref >}}.
