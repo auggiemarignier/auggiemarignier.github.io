@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{marignier2025}
+\textbf{A.~Marignier}, C.~M. Eakin, and M.~S. Miller,  ``Sediment thickness of
+  the contiguous united states from teleseismic receiver functions,'' {\em
+  Seismological Research Letters},  06 2025
+  \texttt{\url{https://doi.org/10.1785/0220250077 }}.
+
+\bibitem{hicks2025}
+S.~P. Hicks, P.~J. Gonzalez, A.~Lomax, A.~M.~G. Ferreira, R.~S. Ramalho, N.~C.
+  Mitchell, G.~Silveira, N.~A. Dias, J.~Fontiela, R.~Fernandes, S.~Custódio,
+  M.~Tsekhmistrenko, V.~Mendes, A.~Pimentel, R.~Silva, W.~Sturgeon,
+  \textbf{A.~Marignier}, F.~Carrilho, R.~Marques, M.~Miranda, and A.~M. Garcia,
+   ``{Leaky faults modulated magma ascent and adjacent seismicity during the
+  2022 São Jorge Island (Azores) seismic-volcanic unrest}.''
+\newblock (\textit{under review at Nature Geoscience})
+  \texttt{\url{https://eartharxiv.org/repository/view/8224/ }}.
+
+\bibitem{marignier2024-1}
+\textbf{A.~Marignier}, J.~Hauser, and M.~Sambridge,  ``Opinionated inversion
+  and regularisation approaches for delineation of {DCIP} targets.''
+\newblock (\textit{under review at Geophysical Journal International}).
+
+\bibitem{he2024}
+J.~He, M.~Sambridge, J.~Hauser, A.~P. Valentine, F.~Magrini, and
+  \textbf{A.~Marignier},  ``{CoFI}: {Linking} geoscience inference problems
+  with tools for their solution.''
+\newblock (\textit{in prep}).
+
+\bibitem{tsekmistremko2024}
+M.~Tsekhmistrenko, A.~M.~G. Ferreira, M.~Miranda, S.~Baranbooei,
+  R.~Cabeices~Diaz, M.~Carapu\c{c}o, C.~Corela, J.~L. Duarte, H.~Ferreira,
+  W.~Hartmut~Geissler, K.~Harris, S.~P. Hicks, K.~Hosseini, K.-Y. Ke,
+  F.~Kr\"uger, D.~Lange, A.~Loureiro, P.~Makus, \textbf{A.~Marignier},
+  M.~Neres, L.~Ramos, T.~Rein, A.~Saoulis, D.~Schlaporst, M.~C. Schmidt-Aursch,
+  and F.~Tilmann,  ``Performance of the 2021-2022 {UPFLOW} large ocean bottom
+  seismometer array in the {Azores}-{Madeira}-{Canary} {Islands} region,
+  {Atlantic} {Ocean}.''
+\newblock (\textit{in prep}).
+
+\bibitem{marignier2024}
+\textbf{A.~Marignier}, C.~M. Eakin, B.~Hejrani, S.~Agrawal, and R.~Hassan,
+  ``Sediment thickness across {Australia} from passive seismic methods,'' {\em
+  Geophysical Journal International},  vol.~237,  pp.~849--861,  May 2024
+  \texttt{\url{https://doi.org/10.1093/gji/ggae070 }}.
+
+\bibitem{sturgeon2023}
+W.~Sturgeon, A.~M.~G. Ferreira, L.~Schardong, and \textbf{A.~Marignier},
+  ``Crustal {Structure} of the {Western} {U}.{S}. {From} {Rayleigh} and {Love}
+  {Wave} {Amplification} {Data},'' {\em Journal of Geophysical Research: Solid
+  Earth},  vol.~128,  no.~8,  p.~e2022JB026148,  2023
+  \texttt{\url{https://doi.org/10.1029/2022JB026148 }}.
+
+\bibitem{marignier2023-2}
+\textbf{A.~Marignier},  ``{PxMCMC}: {A} {Python} package for proximal {Markov}
+  {Chain} {Monte} {Carlo},'' {\em Journal of Open Source Software},  vol.~8,
+  p.~5582,  July 2023 \texttt{\url{https://doi.org/10.21105/joss.05582 }}.
+
+\bibitem{price2023}
+M.~A. Price, M.~Mars, M.~M. Docherty, A.~S. Mancini, \textbf{A.~Marignier}, and
+  J.~D. McEwen,  ``Fast emulation of anisotropies induced in the cosmic
+  microwave background by cosmic strings,'' {\em The Open Journal of
+  Astrophysics},  vol.~6,  October 2023
+  \texttt{\url{https://doi.org/10.21105/astro.2307.04798 }}.
+
+\bibitem{marignier2023-1}
+\textbf{A.~Marignier}, T.~D. Kitching, J.~D. McEwen, and A.~M.~G. Ferreira,
+  ``Sparse {Bayesian} mass-mapping using trans-dimensional {MCMC},'' {\em The
+  Open Journal of Astrophysics},  vol.~6,  June 2023
+  \texttt{\url{https://doi.org/10.21105/astro.2211.13963 }}.
+
+\bibitem{marignier2023}
+\textbf{A.~Marignier}, J.~D. McEwen, A.~M.~G. Ferreira, and T.~D. Kitching,
+  ``Posterior sampling for inverse imaging problems on the sphere in seismology
+  and cosmology,'' {\em RAS Techniques and Instruments},  vol.~2,  pp.~20--32,
+  January 2023 \texttt{\url{https://doi.org/10.1093/rasti/rzac010 }}.
+
+\bibitem{PhD}
+\textbf{A.~Marignier},  {\em {From Dark Matter to the Earth's Deep Interior:
+  There and Back Again}}.
+\newblock PhD thesis,  University College London,  2023
+  \texttt{\url{https://discovery.ucl.ac.uk/id/eprint/10162902 }}.
+
+\bibitem{cobb2021}
+O.~J. Cobb, C.~G.~R. Wallis, A.~N. Mavor-Parker, \textbf{A.~Marignier}, M.~A.
+  Price, M.~d'Avezac, and J.~D. McEwen,  ``Efficient {Generalized} {Spherical}
+  {CNNs},'' in {\em International Conference on Learning Representations},
+  March 2021 \texttt{\url{https://arxiv.org/abs/2010.11661v3 }}.
+
+\bibitem{marignier2020}
+\textbf{A.~Marignier}, A.~M.~G. Ferreira, and T.~D. Kitching,  ``The
+  {Probability} of {Mantle} {Plumes} in {Global} {Tomographic} {Models},'' {\em
+  Geochemistry, Geophysics, Geosystems},  vol.~21,  no.~9,  p.~e2020GC009276,
+  2020 \texttt{\url{https://doi.org/10.1029/2020GC009276 }}.
+
+\bibitem{ferreira2020}
+A.~M.~G. Ferreira, \textbf{A.~Marignier}, J.~Attanayake, M.~Frietsch, and
+  A.~Berbellini,  ``Crustal structure of the {Azores} {Archipelago} from
+  {Rayleigh} wave ellipticity data,'' {\em Geophysical Journal International},
+  vol.~221,  pp.~1232--1247,  May 2020
+  \texttt{\url{https://doi.org/10.1093/gji/ggaa076 }}.
+
+\end{thebibliography}
