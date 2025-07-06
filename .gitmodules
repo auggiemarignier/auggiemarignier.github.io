@@ -1,0 +1,3 @@
+[submodule "content/cv/cv"]
+	path = content/cv/cv
+	url = https://github.com/auggiemarignier/cv.git

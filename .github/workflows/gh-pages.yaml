@@ -10,36 +10,31 @@ jobs:
   setup:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Generate CV
+      - name: Generate CV _index.md
         id: generate_cv
         run: |
           pip install -r requirements.txt
-          cd ${GITHUB_WORKSPACE}/content/cv
-          python generate_cv.py
+          bash ${GITHUB_WORKSPACE}/content/cv/csl/update_csl.sh
+          python ${GITHUB_WORKSPACE}/content/cv/generate_cv.py
 
-      - uses: docker://pandoc/latex
+      - name: Generate CV PDF
+        uses: xu-cheng/texlive-action@v2
         with:
-            args: >-
-                /github/workspace/content/cv/_index.md
-                --variable
-                geometry=margin=0.5in
-                --variable
-                pagestyle=empty
-                -o
-                /github/workspace/static/uploads/cv.pdf
-                --pdf-engine
-                xelatex
-    
+            run: |
+                cd ${GITHUB_WORKSPACE}/content/cv/cv
+                latexmk -quiet -pdf main.tex
+                cd ${GITHUB_WORKSPACE}
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
