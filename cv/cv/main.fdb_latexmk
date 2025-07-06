@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1751791543.22732 "main.aux" "main.bbl" "main" 1751791543.92039 0
-  "./mypubs.bst" 1751791443.09062 18902 14ca6f4efb1b047c6758f6002b794313 ""
-  "./publications.bib" 1751791468.60267 12875 c75670810b15ab2a62f111c5f40fdd75 ""
-  "main.aux" 1751791543.72792 2214 74c456259cbd54479e2f9e953590765e "pdflatex"
+["bibtex main"] 1751792459.38916 "main.aux" "main.bbl" "main" 1751792460.0703 0
+  "./mypubs.bst" 1751792368.07654 18902 14ca6f4efb1b047c6758f6002b794313 ""
+  "./publications.bib" 1751792384.35167 12875 c75670810b15ab2a62f111c5f40fdd75 ""
+  "main.aux" 1751792459.88024 2214 74c456259cbd54479e2f9e953590765e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1751791543.3045 "main.tex" "main.pdf" "main" 1751791543.92058 0
+["pdflatex"] 1751792459.46423 "main.tex" "main.pdf" "main" 1751792460.0705 0
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/texlive/texdir/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/texdir/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -81,11 +81,11 @@
   "/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1751336868 5523531 3095b98de6c7c823efc441a15f4e5550 ""
   "/opt/texlive/texdir/texmf-var/web2c/pdftex/pdflatex.fmt" 1751336947 3599578 59b7f3c177d5e6c1cb9ff1b49b3296ac ""
   "/opt/texlive/texdir/texmf.cnf" 1751336862 555 bd60ff59e4d560b42d96b004436f91d3 ""
-  "cv.tex" 1751791468.54667 14700 9dd97ac9a98d24a42fa22da85445bbc8 ""
-  "main.aux" 1751791543.72792 2214 74c456259cbd54479e2f9e953590765e "pdflatex"
-  "main.bbl" 1751791543.29992 5089 57e913f96338571994cb900cdc226891 "bibtex main"
-  "main.out" 1751791543.72792 1506 5bb47b4438cae02c942dc3fe21be2cd8 "pdflatex"
-  "main.tex" 1751791468.54567 516 1910bf32f11d26aacbb1303915636e39 ""
+  "cv.tex" 1751792384.29367 14700 9dd97ac9a98d24a42fa22da85445bbc8 ""
+  "main.aux" 1751792459.88024 2214 74c456259cbd54479e2f9e953590765e "pdflatex"
+  "main.bbl" 1751792459.46023 5089 57e913f96338571994cb900cdc226891 "bibtex main"
+  "main.out" 1751792459.88024 1506 5bb47b4438cae02c942dc3fe21be2cd8 "pdflatex"
+  "main.tex" 1751792384.29367 516 1910bf32f11d26aacbb1303915636e39 ""
   (generated)
   "main.aux"
   "main.log"
