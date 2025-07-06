@@ -31,7 +31,8 @@ module:
 
 enableGitInfo: false
 summaryLength: 30
-paginate: 10
+pagination: 
+  paperSize: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
@@ -41,7 +42,7 @@ permalinks:
   categories: '/category/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
+  home: [HTML, RSS, JSON, WebAppManifest]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
