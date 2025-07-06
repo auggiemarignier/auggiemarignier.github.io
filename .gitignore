@@ -11,3 +11,4 @@ node_modules/
 # Generated CV
 static/uploads/cv.pdf
 content/cv/_index.md
+content/cv/csl/*.csl

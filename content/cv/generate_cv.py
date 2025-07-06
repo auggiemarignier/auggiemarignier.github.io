@@ -15,6 +15,9 @@ import os
 from pathlib import Path
 import subprocess
 
+from pybtex.database import parse_file, BibliographyData
+from pybtex.database.output.bibtex import Writer
+
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 CV_CONTENT_PATH = PROJECT_ROOT / "content" / "cv"
@@ -65,6 +68,26 @@ def clean_source_files(source_files: list[Path]) -> None:
         source_file.write_text(content, encoding="utf-8")
 
 
+def sort_bibtex_entries(bib_file: Path) -> None:
+    """
+    Sort the bibtex entries in the publications.bib file by year.
+
+    Pandoc/citeproc isn't respecting the order of the entries in the bib file,
+    for some reason. Probably something to do with \\nocite{}
+    """
+
+    bib_data = parse_file(bib_file)
+    entries = sorted(
+        bib_data.entries.items(),
+        key=lambda item: int(item[1].fields.get("year", 0)),
+        reverse=True,
+    )
+
+    sorted_bib = BibliographyData(entries=dict(entries))
+    writer = Writer()
+    writer.write_file(sorted_bib, bib_file)
+
+
 def call_pandoc() -> None:
     """
     Call pandoc to convert the cleaned latex source to markdown.
@@ -76,10 +99,11 @@ def call_pandoc() -> None:
         "--output",
         str(output_file),
         "--from=latex",
-        "--to=markdown",
+        "--to=markdown_strict",
         "--bibliography",
         str(CV_SOURCE_PATH / "publications.bib"),
         "--citeproc",
+        f"--csl={CV_CONTENT_PATH / 'csl' / 'ieee-with-url.csl'}",
     ]
 
     subprocess.run(command, check=True)
@@ -92,6 +116,7 @@ def main() -> None:
     os.chdir(CV_SOURCE_PATH)
     source_files = get_source_files()
     clean_source_files(source_files)
+    sort_bibtex_entries(CV_SOURCE_PATH / "publications.bib")
     call_pandoc()
 
 
